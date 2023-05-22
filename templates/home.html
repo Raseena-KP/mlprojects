@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{{url_for('predict_datapoints')}}", method="post">
+        <table>
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td><select name="gender" id="gender"> 
+                        <option value="male">male</option>
+                        <option value="female">female</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="race_ethnicity">Race/ethnicity</label></td>
+                <td><select name="race_ethnicity" id="race_ethnicity"> 
+                        <option value="group A">group A</option>
+                        <option value="group B">group B</option>
+                        <option value="group C">group C</option>
+                        <option value="group D">group D</option>
+                        <option value="group E">group E</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="parental_level_of_education">Parental level of education</label></td>
+                <td>
+                    <select name="parental_level_of_education" id="parental_level_of_education"> 
+                        <option value="bachelor's degree">bachelor's degree</option>
+                        <option value="some college">some college</option>
+                        <option value="master's degree">master's degree</option>
+                        <option value="associate's degree">associate's degree</option>
+                        <option value="high school">high school</option>
+                        <option value="some high school">some high school</option>
+                    </select>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="lunch">Lunch</label></td>
+                <td>
+                    <select name="lunch" id="lunch"> 
+                        <option value="standard">standard</option>
+                        <option value="free/reduced">free/reduced</option>
+                    </select>
+                
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="test_preparation_course">Test preparation course</label></td>
+                <td>
+                    <select name="test_preparation_course" id="test_preparation_course"> 
+                        <option value="none">none</option>
+                        <option value="completed">completed</option>
+                    </select>
+                
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="reading_score">Reading score</label></td>
+                <td><input type="number" name="reading_score" placeholder="Enter your Reading Score" min='0' max='100'/></td>
+            </tr>
+
+            <tr>
+                <td><label for="writing_score">Writing score</label></td>
+                <td><input type="number" name="writing_score"
+                    placeholder="Enter your Writing Score" min='0' max='100'/></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit">calculate  Math SCore</td>
+            </tr>
+
+        </table>
+        
+
+    </form>
+
+    <h2>{{result}}</h2>
+</body>
+</html>
